@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  beka-cloud:
+    build:
+      context: .
+      dockerfile: ./deployment/Dockerfile
+    container_name: beka-cloud-frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    command: "yarn start"
