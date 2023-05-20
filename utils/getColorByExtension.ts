@@ -15,5 +15,3 @@ export type Color = typeof extColor[Extension];
 export const getColorByExtension = (ext: string): Color => {
   return extColor[ext];
 };
-
-funcion

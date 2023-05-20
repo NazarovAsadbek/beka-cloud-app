@@ -30,6 +30,4 @@ const AuthPage: NextPage = () => {
   );
 };
 
-c
-
 export default AuthPage;
