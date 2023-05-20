@@ -44,6 +44,7 @@ export const Files: React.FC<FilesProps> = ({ items, withActions }) => {
               isActive={selectedIds.length > 0}
             />
           )}
+          {/*@ts-ignore*/}
           <FileList items={files} onFileSelect={onFileSelect} />
         </>
       ) : (

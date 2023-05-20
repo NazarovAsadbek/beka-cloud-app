@@ -12,7 +12,7 @@ interface FileListProps {
 }
 
 export const FileList: React.FC<FileListProps> = ({ items, onFileSelect }) => {
-  return (
+    return (
     <div className={styles.root}>
       {items.map((item) => (
         <div data-id={item.id} key={item.id} className="file">
@@ -21,6 +21,7 @@ export const FileList: React.FC<FileListProps> = ({ items, onFileSelect }) => {
       ))}
 
       <Selecto
+        // @ts-ignore
         container=".files"
         selectableTargets={[".file"]}
         selectByClick
@@ -31,10 +32,12 @@ export const FileList: React.FC<FileListProps> = ({ items, onFileSelect }) => {
         onSelect={(e) => {
           e.added.forEach((el) => {
             el.classList.add("active");
+            // @ts-ignore
             onFileSelect(Number(el.dataset["id"]), "select");
           });
           e.removed.forEach((el) => {
             el.classList.remove("active");
+            // @ts-ignore
             onFileSelect(Number(el.dataset["id"]), "unselect");
           });
         }}

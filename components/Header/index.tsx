@@ -22,6 +22,7 @@ export const Header: React.FC = () => {
       <div className={styles.headerInner}>
         <div className={styles.headerLeft}>
           <h2>
+            {/*@ts-ignore*/}
             <CloudOutlined />
             Cloud Storage
           </h2>

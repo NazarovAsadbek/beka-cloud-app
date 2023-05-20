@@ -20,13 +20,14 @@ export const FileCard: React.FC<FileCardProps> = ({
   const color = getColorByExtension(ext);
   const classColor = styles[color];
 
-  return (
+    return (
     <div className={styles.root}>
       <div className={styles.icon}>
         <i className={classColor}>{ext}</i>
         {isImage(ext) ? (
           <img className={styles.image} src={imageUrl} alt="File" />
         ) : (
+            // @ts-ignore
           <FileTextOutlined />
         )}
       </div>

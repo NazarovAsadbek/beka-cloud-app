@@ -8,7 +8,7 @@ import * as Api from "@/api";
 export const UploadButton: React.FC = () => {
   const [fileList, setFileList] = React.useState<UploadFile[]>([]);
 
-  const onUploadSuccess = async (options) => {
+  const onUploadSuccess = async (options: any) => {
     try {
       await Api.files.uploadFile(options);
 
@@ -31,6 +31,7 @@ export const UploadButton: React.FC = () => {
       onChange={({ fileList }) => setFileList(fileList)}
       className={styles.upload}
     >
+      {/*@ts-ignore*/}
       <Button type="primary" icon={<CloudUploadOutlined />} size="large">
         Загрузить файл
       </Button>
